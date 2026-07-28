@@ -7,7 +7,7 @@
 <meta name="description" content="Crawlspace inspections, sump pump testing, and moisture barrier installation across Hampton Roads, Virginia. Call, text, email, or request an appointment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght=8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #111311;
@@ -28,10 +28,10 @@
     --shadow-lg: 0 24px 50px -12px rgba(22, 36, 35, 0.12);
     --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
+
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  
+
   body{
     margin:0;
     background:var(--base);
@@ -41,7 +41,7 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  
+
   h1,h2,h3,.display{
     font-family:'Archivo Expanded', sans-serif;
     text-transform:uppercase;
@@ -49,25 +49,25 @@
     color:var(--ink);
     margin:0;
   }
-  
+
   .mono{
     font-family:'JetBrains Mono', monospace;
     letter-spacing:0.02em;
   }
-  
+
   a{color:inherit; text-decoration:none; transition: var(--transition);}
   img,svg{max-width:100%;display:block;}
-  
+
   .wrap{
     max-width:1120px;
     margin:0 auto;
     padding:0 28px;
   }
-  
+
   @media (prefers-reduced-motion: reduce){
     *{animation:none !important; transition:none !important;}
   }
-  
+
   /* ---------- HEADER ---------- */
   header{
     position:sticky;
@@ -99,7 +99,7 @@
   }
   .brand .mark{
     height:36px;
-    width:auto;
+    width:48px;
     flex-shrink:0;
   }
   nav.links{
@@ -175,7 +175,7 @@
       display:none;
     }
   }
-  
+
   /* ---------- HERO ---------- */
   .hero{
     padding:96px 0 64px;
@@ -259,7 +259,7 @@
     color:var(--teal);
     background:rgba(59, 86, 84, 0.04);
   }
-  
+
   /* ---------- GAUGE CARD ---------- */
   .gauge-card{
     background:var(--panel);
@@ -307,7 +307,7 @@
     color:var(--ink-soft);
     font-style:italic;
   }
-  
+
   /* ---------- SECTION SHELL ---------- */
   section{padding:96px 0;}
   @media (max-width:760px){section{padding:64px 0;}}
@@ -326,7 +326,7 @@
     margin-top:18px;
     font-size:18px;
   }
-  
+
   /* ---------- SERVICES ---------- */
   .services-grid{
     display:grid;
@@ -390,7 +390,7 @@
     margin-top:32px;
     font-style:italic;
   }
-  
+
   /* ---------- SERVICE AREA ---------- */
   .area{
     display:grid;
@@ -414,7 +414,7 @@
     font-weight:500;
   }
   .area-list div::before{content:"— "; color:var(--rust);}
-  
+
   /* ---------- CONTACT ---------- */
   .contact{
     background:var(--teal-deep);
@@ -505,7 +505,7 @@
     font-family:'JetBrains Mono', monospace;
     line-height:1.5;
   }
-  
+
   /* ---------- FOOTER ---------- */
   footer{
     padding:64px 0;
@@ -514,7 +514,7 @@
   .footer-logo{
     display:block;
     height:56px;
-    width:auto;
+    width:74px;
     margin:0 auto 32px;
   }
   .footer-row{
@@ -536,7 +536,14 @@
 <header>
   <div class="nav">
     <a href="index.html" class="brand">
-      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4nO2993fiaLbvrZwlcrQBG9uAAeeK3TNz0n3/6ntPnq7sbJwDtgGDyaAc3x9kVblryri6u7qrXK3POmt6rVNgCT3S1n52+G4AcHFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcfnNgDd87fNw+TzchXoAgCAIQhAIwTACgyAIWZZl6rqum6Zpfu1z+7MAgiAIwzCMIDAKAiCoG7pmGKbhrsG3DfK1T8DlfmAYhkmCoDwezo8gCKJpmtbpdpuyrEiWZVlf+/y+d0AAAFEEQWmaYjmO9SIIgg6HfH845Puy4q7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Coastal Crawl Space Care">
+      <svg class="mark" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M25 70 L25 45 M65 45 L65 70" />
+        <path d="M55 70 L55 45 M95 45 L95 70" />
+        <path d="M18 50 L45 27 L72 49" />
+        <path d="M102 50 L75 27 L48 49" />
+        <path d="M20 70 L100 70" />
+        <path d="M52 70 L52 50 L68 50 L68 70" />
+      </svg>
       Cuji Crawl Space Care
     </a>
     <button class="nav-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
@@ -723,9 +730,9 @@
           </div>
         </div>
         <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
-          <input type="hidden" name="_subject" value="New inquiry — Cuji Crawl Space Care website">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="\_subject" value="New inquiry — Cuji Crawl Space Care website">
+          <input type="hidden" name="\_template" value="table">
+          <input type="hidden" name="\_captcha" value="false">
           <div class="form-row">
             <div class="field">
               <label for="name">Name</label>
@@ -768,7 +775,14 @@
 
 <footer>
   <div class="wrap">
-    <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAEJCAYAAAD8YNLtAADrMUlEQVR4nOy951cbWdb2XTlXKWckgQAhQGTH7pm50/P+1c9z52lncs4CJCEhlCvH90NRNu0xwt3tbhv3+a1ZM2uNVeiojnR2nX2ufW0IAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgPwDV97HADAIMAXFPDNAsMwjCAwgqIYCsMw4jiObZqmadu2/bXH9mcBhmEYRVEUw1AhmEYRVEUw1EcxxkMxTAUxTEUxVAcgRAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Coastal Crawl Space Care">
+    <svg class="footer-logo" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 70 L25 45 M65 45 L65 70" />
+      <path d="M55 70 L55 45 M95 45 L95 70" />
+      <path d="M18 50 L45 27 L72 49" />
+      <path d="M102 50 L75 27 L48 49" />
+      <path d="M20 70 L100 70" />
+      <path d="M52 70 L52 50 L68 50 L68 70" />
+    </svg>
     <div class="footer-row">
       <span>© <span id="year"></span> Cuji Crawl Space Care — Hampton Roads, VA</span>
       <span>(910) 508-2478 · cujicrawlspacecare@gmail.com</span>
