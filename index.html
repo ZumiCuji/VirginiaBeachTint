@@ -30,7 +30,12 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior:smooth;
+  }
 
   body{
     margin:0;
@@ -65,7 +70,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
+    \*{animation:none !important; transition:none !important;}
   }
 
   /* ---------- HEADER ---------- */
@@ -529,6 +534,12 @@
     border-top:1px solid rgba(255,255,255,0.08);
     padding-top:24px;
   }
+  .reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
 </style>
 </head>
 <body>
@@ -573,7 +584,7 @@
         <div class="check-row"><span class="check-mark">—</span>Sagging, soft, or discolored floor joists</div>
         <div class="check-row"><span class="check-mark">—</span>Torn, missing, or unsealed vapor barrier</div>
         <div class="check-row"><span class="check-mark">—</span>Sump pump operation &amp; GFCI outlet</div>
-        <div class="gauge-note">Diagnostic fee is just $30 (fully credited toward your barrier installation). Fully Insured.</div>
+        <div class="gauge-note">Inspection is FREE in Norfolk &amp; Virginia Beach! Otherwise just $30 (fully credited toward your barrier installation). Fully Insured.</div>
       </div>
     </div>
   </section>
@@ -595,7 +606,7 @@
             <line x1="17" y1="17" x2="21" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
           <h3>Crawlspace Inspection</h3>
-          <p>A thorough, professional walkthrough covering moisture levels, structural wood condition, mold, pests, standing water, and existing vapor barrier health — with full photo evidence.</p>
+          <p>A thorough, professional walkthrough covering moisture levels, wood framing health, standing water, and vapor barriers — with full photo evidence.</p>
           <div class="spec">Report delivered same day</div>
         </div>
         <div class="service-card reveal">
@@ -645,13 +656,13 @@
       <div class="services-grid">
         <div class="service-card reveal">
           <h3>Crawlspace Inspection</h3>
-          <div class="price"><span class="price-amt">$30</span><span class="price-unit">flat rate</span></div>
-          <p>Complete walkthrough with a detailed written report. Fully credited to your moisture barrier if you go with us.</p>
+          <div class="price"><span class="price-amt">FREE*</span><span class="price-unit">Norfolk &amp; VB</span></div>
+          <p>Detailed written report with photo proof. FREE in Norfolk/VB. For other areas, a $30 flat fee applies, which is fully credited to your installation.</p>
           <div class="spec">diagnostic fee</div>
         </div>
         <div class="service-card reveal">
           <h3>Sump Pump Check</h3>
-          <div class="price"><span class="price-amt">$70</span><span class="price-unit">flat rate</span></div>
+          <div class="price"><span class="price-amt">$40</span><span class="price-unit">flat rate</span></div>
           <p>Test operation, verify the float switch works, confirm the GFCI outlet is safe, and clear any clogging debris.</p>
           <div class="spec">Add-on with any inspection</div>
         </div>
@@ -681,14 +692,13 @@
         <p style="color:var(--ink-soft); margin-top:14px;">Based locally and familiar with the crawlspace conditions specific to this stretch of coastal Virginia. Don't see your town listed? Reach out — we cover the surrounding area too.</p>
       </div>
       <div class="area-list reveal">
-        <div>Norfolk</div>
-        <div>Virginia Beach</div>
+        <div>Norfolk (Free Inspections!)</div>
+        <div>Virginia Beach (Free Inspections!)</div>
         <div>Chesapeake</div>
         <div>Portsmouth</div>
         <div>Suffolk</div>
         <div>Hampton</div>
         <div>Newport News</div>
-        <div>Williamsburg</div>
       </div>
     </div>
   </section>

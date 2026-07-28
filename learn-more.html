@@ -3,38 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn More - Technical Info | Cuji Crawl Space Care</title>
-<meta name="description" content="Technical facts and guides about vapor barriers, drainage systems, and soil conditions in coastal Virginia.">
+<title>How It Works | Cuji Crawl Space Care</title>
+<meta name="description" content="Technical details on why coastal ground moisture requires a high-quality vapor barrier and how Cuji Crawl Space Care protects Hampton Roads homes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght=8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#141414;
-    --ink-soft:#4b463d;
-    --base:#eef0ea;
-    --base-deep:#e2e5db;
-    --panel:#ffffff;
-    --teal:#46615f;
-    --teal-deep:#141412;
-    --rust:#a5502a;
-    --rust-light:#d98b5f;
-    --cream:#aca89f;
-    --silver:#c9cdc7;
-    --line:#c7ccc3;
-    --radius:2px;
+  :root {
+    --ink: #111311;
+    --ink-soft: #4a504a;
+    --base: #f4f6f1;
+    --base-deep: #e6ebdf;
+    --panel: #ffffff;
+    --teal: #3b5654;
+    --teal-deep: #162423;
+    --rust: #a5502a;
+    --rust-light: #d98b5f;
+    --cream: #d3cfc7;
+    --silver: #dbe0db;
+    --line: #d2d7cf;
+    --radius: 4px;
+    --shadow-sm: 0 2px 8px rgba(22, 36, 35, 0.04);
+    --shadow-md: 0 12px 30px -10px rgba(22, 36, 35, 0.08);
+    --shadow-lg: 0 24px 50px -12px rgba(22, 36, 35, 0.12);
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    scroll-behavior:smooth;
+  }
+
   body{
     margin:0;
     background:var(--base);
     color:var(--ink);
     font-family:'Source Serif 4', Georgia, serif;
     font-size:17px;
-    line-height:1.55;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
+
   h1,h2,h3,.display{
     font-family:'Archivo Expanded', sans-serif;
     text-transform:uppercase;
@@ -42,28 +54,30 @@
     color:var(--ink);
     margin:0;
   }
+
   .mono{
     font-family:'JetBrains Mono', monospace;
     letter-spacing:0.02em;
   }
-  a{color:inherit; text-decoration:none;}
+
+  a{color:inherit; text-decoration:none; transition: var(--transition);}
   img,svg{max-width:100%;display:block;}
+
   .wrap{
     max-width:1120px;
     margin:0 auto;
     padding:0 28px;
   }
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
-  }
+
   /* ---------- HEADER ---------- */
   header{
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(17,17,15,0.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid rgba(255,255,255,0.1);
+    background:rgba(22, 36, 35, 0.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    transition: var(--transition);
   }
   .nav{
     display:flex;
@@ -76,14 +90,13 @@
   .brand{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     font-family:'Archivo Expanded', sans-serif;
     font-weight:800;
-    font-size:15px;
-    letter-spacing:0.03em;
+    font-size:14px;
+    letter-spacing:0.04em;
     text-transform:uppercase;
-    text-decoration:none;
-    color:var(--cream);
+    color:var(--base);
   }
   .brand .mark{
     height:38px;
@@ -92,30 +105,40 @@
   }
   nav.links{
     display:flex;
-    gap:28px;
+    gap:32px;
     font-family:'Archivo Expanded', sans-serif;
-    font-size:13px;
+    font-size:12px;
     text-transform:uppercase;
-    letter-spacing:0.05em;
+    letter-spacing:0.06em;
   }
   nav.links a{
-    text-decoration:none;
     color:var(--cream);
     border-bottom:2px solid transparent;
     padding-bottom:3px;
-    transition:border-color .2s, color .2s;
   }
-  nav.links a:hover, nav.links a:focus-visible{color:var(--rust-light);border-color:var(--rust-light);}
+  nav.links a:hover, nav.links a:focus-visible{
+    color:var(--rust-light);
+    border-color:var(--rust-light);
+  }
+  nav.links a.active{
+    color:var(--base);
+    border-color:var(--rust);
+  }
   .nav-phone{
     font-family:'JetBrains Mono', monospace;
-    font-size:14px;
+    font-size:13px;
     font-weight:500;
     background:var(--rust);
     color:#fff;
-    padding:9px 16px;
-    text-decoration:none;
+    padding:10px 18px;
     border-radius:var(--radius);
     white-space:nowrap;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-phone:hover{
+    background:var(--rust-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
   .nav-toggle{
     display:none;
@@ -126,8 +149,8 @@
     padding:4px;
   }
   .nav-toggle svg{
-    width:28px;
-    height:28px;
+    width:24px;
+    height:24px;
     fill:currentColor;
   }
   @media (max-width:760px){
@@ -138,8 +161,8 @@
       top:100%;
       left:0;
       right:0;
-      background:rgba(17,17,15,0.98);
-      border-bottom:1px solid rgba(255,255,255,0.15);
+      background:var(--teal-deep);
+      border-bottom:1px solid rgba(255,255,255,0.1);
       padding:24px 28px;
       gap:20px;
     }
@@ -153,63 +176,71 @@
       display:none;
     }
   }
-  /* ---------- SECTION SHELL ---------- */
-  section{padding:76px 0;}
-  .section-head{
-    max-width:56ch;
-    margin-bottom:44px;
+
+  /* ---------- PAGE HERO ---------- */
+  .page-hero {
+    padding: 80px 0 40px;
+    border-bottom: 1px solid var(--line);
   }
-  .section-head .eyebrow{margin-bottom:14px;}
-  .section-head h2{
-    font-size:clamp(26px, 3.6vw, 36px);
-    font-weight:700;
-    line-height:1.08;
+  .page-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 16px;
   }
-  .section-head p{
-    color:var(--ink-soft);
-    margin-top:14px;
-    font-size:16.5px;
+  .page-hero p {
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 64ch;
+    margin: 0;
   }
-  /* ---------- WHY ---------- */
+
+  /* ---------- WHY / SOIL ---------- */
   .why{
     background:var(--teal-deep);
     color:var(--cream);
   }
-  .why .section-head h2{color:var(--cream);}
-  .why .section-head p{color:#cdc7ba;}
+  .why .section-head h2{color:var(--base);}
+  .why .section-head p{color:var(--cream);}
   .why .eyebrow{color:var(--rust-light);}
-  .why .eyebrow::before{background:#e0a37e;}
+  .why .eyebrow::before{background:var(--rust-light);}
+
   .why-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:1px;
     background:rgba(255,255,255,0.14);
     border:1px solid rgba(255,255,255,0.14);
+    margin-top: 48px;
   }
-  @media (max-width:760px){/why-grid{grid-template-columns:1fr;}}
+  @media (max-width:760px){
+    .why-grid{grid-template-columns:1fr;}
+    .why-item { padding: 24px 20px; }
+  }
   .why-item{
     background:var(--teal-deep);
-    padding:30px 26px;
+    padding:40px 32px;
   }
   .why-item .num{
     font-family:'JetBrains Mono', monospace;
     font-size:12px;
-    color:#e0a37e;
+    color:var(--rust-light);
     letter-spacing:0.08em;
   }
   .why-item h3{
-    font-size:19px;
-    margin-top:10px;
-    color:var(--cream);
+    font-size:20px;
+    margin-top:14px;
+    color:var(--base);
     text-transform:none;
     letter-spacing:0;
   }
   .why-item p{
-    color:#cdc7ba;
-    font-size:15px;
-    margin-top:10px;
+    color:var(--cream);
+    font-size:15.5px;
+    margin-top:12px;
+    line-height:1.6;
   }
-  /* ---------- PROCESS (diagram) ---------- */
+
+  /* ---------- PROCESS DIAGRAM ---------- */
   .process{
     background:var(--panel);
     border-top:1px solid var(--line);
@@ -219,8 +250,17 @@
     background:var(--base);
     border:1px solid var(--line);
     border-radius:var(--radius);
-    padding:20px;
-    margin-bottom:48px;
+    padding:32px;
+    margin-bottom:56px;
+    box-shadow: var(--shadow-sm);
+  }
+  .diagram-wrap svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  @media (max-width: 760px) {
+    .diagram-wrap { padding: 16px; }
   }
   .diagram-caption{
     font-family:'JetBrains Mono', monospace;
@@ -228,36 +268,39 @@
     color:var(--ink-soft);
     text-transform:uppercase;
     letter-spacing:0.05em;
-    margin-top:12px;
+    margin-top:16px;
     text-align:center;
   }
   .steps{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:24px;
+    gap:28px;
   }
   @media (max-width:860px){.steps{grid-template-columns:1fr 1fr;}}
   @media (max-width:560px){.steps{grid-template-columns:1fr;}}
+
   .step .num{
     font-family:'JetBrains Mono', monospace;
     font-size:13px;
     color:var(--rust);
+    font-weight:bold;
   }
   .step h3{
-    font-size:17px;
-    margin-top:8px;
+    font-size:18px;
+    margin-top:12px;
     text-transform:none;
     letter-spacing:0;
   }
   .step p{
-    font-size:14.5px;
+    font-size:15px;
     color:var(--ink-soft);
     margin-top:8px;
+    line-height:1.5;
   }
+
   /* ---------- COMPARISON ---------- */
   .comparison{
     background:var(--panel);
-    border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
   }
   .comp-grid{
@@ -270,26 +313,29 @@
   .comp-card{
     border:1px solid var(--line);
     border-radius:var(--radius);
-    padding:32px;
+    padding:40px 32px;
     background:var(--base);
+    transition: var(--transition);
   }
   .comp-card.highlight{
     border-color:var(--rust);
     background:var(--panel);
-    box-shadow:0 12px 32px -16px rgba(165,80,42,0.2);
+    box-shadow: var(--shadow-lg);
   }
   .comp-card h3{
     font-size:22px;
     margin-bottom:12px;
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:12px;
+    text-transform:none;
+    letter-spacing:0;
   }
   .comp-card .tag{
     font-family:'JetBrains Mono', monospace;
     font-size:11px;
     text-transform:uppercase;
-    padding:4px 8px;
+    padding:4px 10px;
     border-radius:2px;
     font-weight:bold;
   }
@@ -303,134 +349,129 @@
   }
   .comp-card ul{
     padding-left:20px;
-    margin:20px 0;
+    margin:24px 0 0;
     color:var(--ink-soft);
     font-size:15.5px;
   }
   .comp-card li{
-    margin-bottom:8px;
+    margin-bottom:10px;
+    line-height:1.5;
   }
+
   /* ---------- CONTACT ---------- */
   .contact{
     background:var(--teal-deep);
     color:var(--cream);
   }
-  .contact .section-head h2{color:var(--cream);}
-  .contact .section-head p{color:#cdc7ba;}
+  .contact .section-head h2{color:var(--base);}
+  .contact .section-head p{color:var(--cream);}
   .contact .eyebrow{color:var(--rust-light);}
-  .contact .eyebrow::before{background:#e0a37e;}
+  .contact .eyebrow::before{background:var(--rust-light);}
   .contact-grid{
     display:grid;
     grid-template-columns:0.85fr 1.15fr;
-    gap:40px;
+    gap:48px;
   }
-  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr; gap:40px;}}
   .contact-methods a, .contact-methods .method{
     display:flex;
     align-items:center;
-    gap:14px;
-    text-decoration:none;
+    gap:16px;
     color:var(--cream);
-    padding:16px 0;
-    border-bottom:1px solid rgba(255,255,255,0.16);
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .contact-methods a:hover{
+    color:var(--base);
+    border-bottom-color:var(--rust-light);
   }
   .contact-methods .label{
     font-family:'JetBrains Mono', monospace;
-    font-size:12px;
+    font-size:11px;
     color:var(--rust-light);
     text-transform:uppercase;
-    letter-spacing:0.06em;
+    letter-spacing:0.08em;
     display:block;
+    margin-bottom:4px;
   }
   .contact-methods .value{
     font-family:'Archivo Expanded', sans-serif;
-    font-size:17px;
+    font-size:18px;
+    letter-spacing:0.02em;
   }
   form{
     background:var(--base);
     border-radius:var(--radius);
-    padding:28px;
+    padding:36px;
+    box-shadow: var(--shadow-lg);
   }
   form label{
     display:block;
     font-family:'JetBrains Mono', monospace;
-    font-size:12px;
+    font-size:11px;
     text-transform:uppercase;
-    letter-spacing:0.05em;
+    letter-spacing:0.06em;
     color:var(--ink-soft);
-    margin-bottom:6px;
+    margin-bottom:8px;
+    font-weight:500;
   }
-  form .field{margin-bottom:16px;}
+  form .field{margin-bottom:20px;}
   form input, form select, form textarea{
     width:100%;
     font-family:'Source Serif 4', serif;
-    font-size:15.5px;
-    padding:11px 12px;
+    font-size:16px;
+    padding:12px 16px;
     border:1px solid var(--line);
     border-radius:var(--radius);
     background:#fff;
     color:var(--ink);
+    transition: var(--transition);
   }
   form input:focus, form select:focus, form textarea:focus{
-    outline:2px solid var(--rust);
-    outline-offset:1px;
+    outline:none;
+    border-color:var(--rust);
+    box-shadow: 0 0 0 3px rgba(165,80,42,0.1);
   }
-  form textarea{resize:vertical;min-height:90px;}
-  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  form textarea{resize:vertical;min-height:100px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
   @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
   form .submit{
     width:100%;
-    margin-top:6px;
+    margin-top:8px;
     border:none;
-    cursor:pointer;
     font-size:14px;
   }
   .form-note{
-    font-size:12.5px;
+    font-size:12px;
     color:var(--ink-soft);
-    margin-top:10px;
+    margin-top:14px;
     font-family:'JetBrains Mono', monospace;
+    line-height:1.5;
   }
+
   /* ---------- FOOTER ---------- */
   footer{
-    padding:44px 0 40px;
+    padding:64px 0;
     background:var(--teal-deep);
   }
   .footer-logo{
     display:block;
     height:56px;
     width:auto;
-    margin:0 auto 26px;
+    margin:0 auto 32px;
   }
   .footer-row{
     display:flex;
     justify-content:space-between;
-    flex-wrap:wrap;
-    gap:14px;
-    font-family:'JetBrains Mono', monospace;
-    font-size:12.5px;
-    color:var(--cream);
-    border-top:1px solid rgba(255,255,255,0.14);
-    padding-top:22px;
-  }
-  .btn{
-    font-family:'Archivo Expanded', sans-serif;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-    text-decoration:none;
-    padding:14px 24px;
-    border-radius:var(--radius);
-    display:inline-flex;
     align-items:center;
-    gap:10px;
-    transition:transform .15s ease, box-shadow .15s ease;
-    border:1px solid transparent;
-    cursor:pointer;
+    flex-wrap:wrap;
+    gap:16px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--cream);
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:24px;
   }
-  .btn:hover{transform:translateY(-1px);}
-  .btn-primary{background:var(--rust);color:#fff;}
-  .btn-primary:hover{box-shadow:0 6px 16px rgba(165,80,42,0.3);}
   .reveal{
     opacity:0;
     transform:translateY(16px);
@@ -444,7 +485,7 @@
 <header>
   <div class="nav">
     <a href="index.html" class="brand">
-      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4nO2993fiaLbvrZwlcrQBG9uAAeeK3TNz0n3/6ntPnq7sbJwDtgGDyaAc3x9kVblryri6u7qrXK3POmt6rVNgCT3S1n52+G4AcHFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcfnNgDd87fNw+TzchXoAgCAIQhAIwTACgyAIWZZl6rqum6Zpfu1z+7MAgiAIwzCMIDAKAiCoG7pmGKbhrsG3DfK1T8DlfmAYhkmCoDwezo8gCKJpmtbpdpuyrEiWZVlf+/y+d0AAAFEEQWmaYjmO9SIIgg6HfH845Puy4q7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Cuji Crawl Space Care">
+      <img class="mark" src="CCCLogo.png" alt="Cuji Crawl Space Care Logo">
       Cuji Crawl Space Care
     </a>
     <button class="nav-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
@@ -452,9 +493,9 @@
     </button>
     <nav class="links">
       <a href="index.html">Home</a>
-      <a href="learn-more.html">How It Works</a>
+      <a href="learn-more.html" class="active">How It Works</a>
       <a href="about.html">About Me</a>
-      <a href="index.html#area">Service Area</a>
+      <a href="#area">Service Area</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-phone" href="tel:+19105082478">(910) 508-2478</a>
@@ -462,11 +503,20 @@
 </header>
 
 <main>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Technical deep dive</div>
+      <h1>Under the floorboards</h1>
+      <p>A solid, high-performing crawlspace shouldn't be a mystery. Here is exactly why moisture builds up in coastal Virginia soil, and how a targeted barrier system prevents it.</p>
+    </div>
+  </section>
+
   <!-- WHY -->
   <section class="why">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Why this matters here</div>
+        <div class="eyebrow">Coastal soil mechanics</div>
         <h2>Coastal soil keeps the water table close.</h2>
         <p>Between the humidity, the tides, and a high water table, Hampton Roads crawlspaces stay damp longer than most. Left alone, that moisture works its way into the floor joists above it.</p>
       </div>
@@ -500,12 +550,10 @@
       </div>
       <div class="diagram-wrap reveal">
         <svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross section diagram of a house crawlspace showing the vapor barrier, sump pump basin, and water table">
-          <!-- house outline -->
           <path d="M120 90 L450 20 L780 90" stroke="#141414" stroke-width="2.5" fill="none"/>
           <line x1="150" y1="90" x2="150" y2="150" stroke="#141414" stroke-width="2.5"/>
           <line x1="750" y1="90" x2="750" y2="150" stroke="#141414" stroke-width="2.5"/>
           <line x1="150" y1="150" x2="750" y2="150" stroke="#141414" stroke-width="2.5"/>
-          <!-- floor joists -->
           <line x1="180" y1="150" x2="180" y2="170" stroke="#141414" stroke-width="1.5"/>
           <line x1="260" y1="150" x2="260" y2="170" stroke="#141414" stroke-width="1.5"/>
           <line x1="340" y1="150" x2="340" y2="170" stroke="#141414" stroke-width="1.5"/>
@@ -514,21 +562,16 @@
           <line x1="580" y1="150" x2="580" y2="170" stroke="#141414" stroke-width="1.5"/>
           <line x1="660" y1="150" x2="660" y2="170" stroke="#141414" stroke-width="1.5"/>
           <line x1="720" y1="150" x2="720" y2="170" stroke="#141414" stroke-width="1.5"/>
-          <!-- piers -->
           <rect x="230" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
           <rect x="460" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
           <rect x="650" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
-          <!-- ground / crawlspace floor -->
           <line x1="150" y1="260" x2="750" y2="260" stroke="#8a8f83" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <!-- vapor barrier -->
           <line x1="160" y1="255" x2="740" y2="255" stroke="#46615f" stroke-width="4"/>
           <text x="452" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#46615f">VAPOR BARRIER — SEALED TO PIERS</text>
-          <!-- sump basin -->
           <rect x="600" y="255" width="60" height="45" fill="none" stroke="#a5502a" stroke-width="2"/>
           <line x1="630" y1="255" x2="630" y2="230" stroke="#a5502a" stroke-width="2"/>
           <path d="M622 232 L630 224 L638 232" stroke="#a5502a" stroke-width="2" fill="none"/>
           <text x="630" y="315" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#a5502a">SUMP PIT</text>
-          <!-- water table -->
           <line x1="150" y1="300" x2="750" y2="300" stroke="#7fa6c9" stroke-width="1.5" stroke-dasharray="2 4"/>
           <text x="160" y="313" font-family="JetBrains Mono, monospace" font-size="10" fill="#5c7fa0">WATER TABLE</text>
           <text x="180" y="140" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b756f">LIVING SPACE</text>
@@ -594,13 +637,13 @@
     </div>
   </section>
 
-  <!-- CONTACT FORM FOR EASY BOOKING -->
+  <!-- CONTACT / BOOKING -->
   <section id="contact" class="contact">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Schedule Services</div>
-        <h2>Ready for a drier, cleaner crawlspace?</h2>
-        <p>Fill out the form below to lock in an honest inspection.</p>
+        <div class="eyebrow">Ready to secure your crawlspace?</div>
+        <h2>Request a straightforward diagnostic walk</h2>
+        <p>Book a local inspection — fully credited toward your vapor barrier installation.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-methods reveal">
@@ -624,7 +667,7 @@
           </div>
         </div>
         <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
-          <input type="hidden" name="\_subject" value="New inquiry from Learn More page">
+          <input type="hidden" name="\_subject" value="New inquiry — Cuji Crawl Space Care website">
           <input type="hidden" name="\_template" value="table">
           <input type="hidden" name="\_captcha" value="false">
           <div class="form-row">
@@ -657,10 +700,10 @@
           </div>
           <div class="field">
             <label for="notes">Anything we should know?</label>
-            <textarea id="notes" name="Notes" placeholder="Musty smell, visible water, preferred times, etc."></textarea>
+            <textarea id="notes" name="Notes" placeholder="Musty smell, visible water, upcoming home sale, preferred days/times, etc."></textarea>
           </div>
           <button type="submit" class="btn btn-primary submit">Send request</button>
-          <div class="form-note">We'll follow up within 24 hours to schedule.</div>
+          <div class="form-note">Goes straight to cujicrawlspacecare@gmail.com — we'll follow up by phone or email to schedule.</div>
         </form>
       </div>
     </div>
@@ -669,7 +712,7 @@
 
 <footer>
   <div class="wrap">
-    <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAEJCAYAAAD8YNLtAADrMUlEQVR4..." alt="Coastal Crawl Space Care">
+    <img class="footer-logo" src="CCCLogo.png" alt="Cuji Crawl Space Care Logo">
     <div class="footer-row">
       <span>© <span id="year"></span> Cuji Crawl Space Care — Hampton Roads, VA</span>
       <span>(910) 508-2478 · cujicrawlspacecare@gmail.com</span>
