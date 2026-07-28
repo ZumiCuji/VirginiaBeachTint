@@ -198,35 +198,39 @@
   .story {
     background: var(--panel);
     border-bottom: 1px solid var(--line);
+    padding: 96px 0;
   }
   .story-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: flex-start;
   }
   @media (max-width: 860px) {
     .story-grid {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 48px;
     }
+    .story { padding: 64px 0; }
   }
   .story-content h2 {
     font-size: clamp(24px, 3.5vw, 32px);
     margin-bottom: 24px;
     text-transform: none;
     letter-spacing: 0;
+    line-height: 1.2;
   }
   .story-content p {
     color: var(--ink-soft);
-    margin-bottom: 20px;
-    font-size: 17px;
+    margin-bottom: 24px;
+    font-size: 17.5px;
+    line-height: 1.7;
   }
   .values-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 40px;
+    gap: 32px;
+    margin-top: 48px;
   }
   @media (max-width: 520px) {
     .values-grid {
@@ -237,14 +241,14 @@
     font-family: 'Archivo Expanded', sans-serif;
     font-size: 14px;
     color: var(--teal);
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
   .value-item p {
-    font-size: 14.5px;
+    font-size: 15px;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   /* ---------- CARD STYLE ---------- */
@@ -252,7 +256,7 @@
     background: var(--base);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 40px;
+    padding: 48px 40px;
     box-shadow: var(--shadow-md);
   }
   .about-portrait h3 {
@@ -271,12 +275,11 @@
     display: block;
     font-weight: 500;
   }
-  .quote-box {
-    border-left: 3px solid var(--teal);
-    padding-left: 20px;
-    margin-top: 24px;
-    font-style: italic;
+  .about-portrait p {
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--ink-soft);
+    margin: 0 0 20px;
   }
 
   /* ---------- CONTACT ---------- */
@@ -286,8 +289,6 @@
   }
   .contact .section-head h2{color:var(--base);}
   .contact .section-head p{color:var(--cream);}
-  .contact .eyebrow{color:var(--rust-light);}
-  .contact .eyebrow::before{background:var(--rust-light);}
   .contact-grid{
     display:grid;
     grid-template-columns:0.85fr 1.15fr;
@@ -427,7 +428,6 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="wrap">
-      <div class="eyebrow">Local &amp; Transparent</div>
       <h1>Who is Cuji Crawl Space Care?</h1>
       <p>I built this company on a simple principle: you shouldn't have to choose between a damp crawlspace and a high-pressure sales pitch.</p>
     </div>
@@ -456,18 +456,15 @@
         <h3>A message from the owner</h3>
         <span class="title">Owner, Cuji Crawl Space Care</span>
         <p>Every home is unique, but the basic principles of dry space are universal: block ground evaporation and route water out immediately. I look forward to working directly with you on your home.</p>
-        <div class="quote-box">
-          "I will inspect your crawlspace, show you the photo evidence, and give you an honest recommendation. If a standard 6 mil barrier does the job, that is exactly what I will quote."
-        </div>
+        <p>I will inspect your crawlspace, show you the photo evidence, and give you an honest recommendation. If a standard 6 mil barrier does the job, that is exactly what I will quote.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT / BOOKING -->
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Let's connect</div>
         <h2>Ready to meet your local crawlspace partner?</h2>
         <p>Drop a line today—I handle every crawlspace diagnostic review personally.</p>
       </div>

@@ -67,6 +67,7 @@
     max-width:1120px;
     margin:0 auto;
     padding:0 28px;
+    width: 100%;
   }
 
   /* ---------- HEADER ---------- */
@@ -201,8 +202,6 @@
   }
   .why .section-head h2{color:var(--base);}
   .why .section-head p{color:var(--cream);}
-  .why .eyebrow{color:var(--rust-light);}
-  .why .eyebrow::before{background:var(--rust-light);}
 
   .why-grid{
     display:grid;
@@ -211,10 +210,11 @@
     background:rgba(255,255,255,0.14);
     border:1px solid rgba(255,255,255,0.14);
     margin-top: 48px;
+    width: 100%;
   }
   @media (max-width:760px){
     .why-grid{grid-template-columns:1fr;}
-    .why-item { padding: 24px 20px; }
+    .why-item { padding: 28px 20px; }
   }
   .why-item{
     background:var(--teal-deep);
@@ -253,11 +253,15 @@
     padding:32px;
     margin-bottom:56px;
     box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
   .diagram-wrap svg {
     width: 100%;
     height: auto;
     display: block;
+    max-width: 100%;
   }
   @media (max-width: 760px) {
     .diagram-wrap { padding: 16px; }
@@ -275,6 +279,7 @@
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:28px;
+    width: 100%;
   }
   @media (max-width:860px){.steps{grid-template-columns:1fr 1fr;}}
   @media (max-width:560px){.steps{grid-template-columns:1fr;}}
@@ -365,8 +370,6 @@
   }
   .contact .section-head h2{color:var(--base);}
   .contact .section-head p{color:var(--cream);}
-  .contact .eyebrow{color:var(--rust-light);}
-  .contact .eyebrow::before{background:var(--rust-light);}
   .contact-grid{
     display:grid;
     grid-template-columns:0.85fr 1.15fr;
@@ -506,7 +509,6 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="wrap">
-      <div class="eyebrow">Technical deep dive</div>
       <h1>Under the floorboards</h1>
       <p>A solid, high-performing crawlspace shouldn't be a mystery. Here is exactly why moisture builds up in coastal Virginia soil, and how a targeted barrier system prevents it.</p>
     </div>
@@ -516,7 +518,6 @@
   <section class="why">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Coastal soil mechanics</div>
         <h2>Coastal soil keeps the water table close.</h2>
         <p>Between the humidity, the tides, and a high water table, Hampton Roads crawlspaces stay damp longer than most. Left alone, that moisture works its way into the floor joists above it.</p>
       </div>
@@ -544,7 +545,6 @@
   <section id="process" class="process">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">How the barrier works</div>
         <h2>What's actually happening under the floor</h2>
         <p>A cross-section of a typical Hampton Roads crawlspace after we've been through it.</p>
       </div>
@@ -608,7 +608,6 @@
   <section id="comparison" class="comparison">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Know Your Options</div>
         <h2>Ground Cover vs. Full Encapsulation</h2>
         <p>We believe in giving you the protection your home actually needs without selling you an overpriced system. Here is how the two approaches stack up.</p>
       </div>
@@ -641,7 +640,6 @@
   <section id="contact" class="contact">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow">Ready to secure your crawlspace?</div>
         <h2>Request a straightforward diagnostic walk</h2>
         <p>Book a local inspection — fully credited toward your vapor barrier installation.</p>
       </div>
