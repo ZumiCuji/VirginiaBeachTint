@@ -70,7 +70,7 @@
   }
 
   @media (prefers-reduced-motion: reduce){
-    \*{animation:none !important; transition:none !important;}
+    *{animation:none !important; transition:none !important;}
   }
 
   /* ---------- HEADER ---------- */
@@ -219,33 +219,6 @@
     flex-wrap:wrap;
     gap:16px;
     margin-top:36px;
-  }
-  .btn{
-    font-family:'Archivo Expanded', sans-serif;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    padding:16px 28px;
-    border-radius:var(--radius);
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    border:1px solid transparent;
-    cursor:pointer;
-  }
-  .btn:hover{
-    transform:translateY(-2px);
-  }
-  .btn-primary{background:var(--rust);color:#fff; box-shadow: var(--shadow-sm);}
-  .btn-primary:hover{
-    background:var(--rust-light);
-    box-shadow: var(--shadow-md);
-  }
-  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink);}
-  .btn-ghost:hover{
-    border-color:var(--teal);
-    color:var(--teal);
-    background:rgba(59, 86, 84, 0.04);
   }
 
   /* ---------- GAUGE CARD ---------- */
@@ -550,7 +523,7 @@
     <div class="wrap hero-grid">
       <div>
         <h1>Tired of<br><em>$15,000 quotes</em><br>from corporate franchises?</h1>
-        <p class="lede">Most Hampton Roads crawlspaces don't need a massive, $15,000 corporate encapsulation package. They just need a high-quality, properly installed vapor barrier and a functioning sump pump. At Cuji Crawl Space Care, we offer honest, licensed, and insured local service without the high-pressure sales tactics.</p>
+        <p class="lede">Most Hampton Roads crawlspaces don't need a massive, $15,000 corporate encapsulation package. They just need a high-quality, properly installed vapor barrier and a functioning sump pump. At Cuji Crawl Space Care, we offer honest and insured local service without the high-pressure sales tactics.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Request an inspection</a>
           <a class="btn btn-ghost" href="learn-more.html">How It Works</a>
@@ -708,9 +681,9 @@
           </div>
         </div>
         <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
-          <input type="hidden" name="\_subject" value="New inquiry — Cuji Crawl Space Care website">
-          <input type="hidden" name="\_template" value="table">
-          <input type="hidden" name="\_captcha" value="false">
+          <input type="hidden" name="_subject" value="New inquiry — Cuji Crawl Space Care website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="field">
               <label for="name">Name</label>
