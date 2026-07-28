@@ -1,73 +1,694 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Include the same HEAD elements, CSS, and Header from index.html here -->
-<title>Learn More | Cuji Crawl Space Care</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn More - Technical Info | Cuji Crawl Space Care</title>
+<meta name="description" content="Technical facts and guides about vapor barriers, drainage systems, and soil conditions in coastal Virginia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --ink-soft:#4b463d;
+    --base:#eef0ea;
+    --base-deep:#e2e5db;
+    --panel:#ffffff;
+    --teal:#46615f;
+    --teal-deep:#141412;
+    --rust:#a5502a;
+    --rust-light:#d98b5f;
+    --cream:#aca89f;
+    --silver:#c9cdc7;
+    --line:#c7ccc3;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--base);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    margin:0;
+  }
+  .mono{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(17,17,15,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--cream);
+  }
+  .brand .mark{
+    height:38px;
+    width:auto;
+    flex-shrink:0;
+  }
+  nav.links{
+    display:flex;
+    gap:28px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  nav.links a{
+    text-decoration:none;
+    color:var(--cream);
+    border-bottom:2px solid transparent;
+    padding-bottom:3px;
+    transition:border-color .2s, color .2s;
+  }
+  nav.links a:hover, nav.links a:focus-visible{color:var(--rust-light);border-color:var(--rust-light);}
+  .nav-phone{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    font-weight:500;
+    background:var(--rust);
+    color:#fff;
+    padding:9px 16px;
+    text-decoration:none;
+    border-radius:var(--radius);
+    white-space:nowrap;
+  }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--cream);
+    cursor:pointer;
+    padding:4px;
+  }
+  .nav-toggle svg{
+    width:28px;
+    height:28px;
+    fill:currentColor;
+  }
+  @media (max-width:760px){
+    nav.links{
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:rgba(17,17,15,0.98);
+      border-bottom:1px solid rgba(255,255,255,0.15);
+      padding:24px 28px;
+      gap:20px;
+    }
+    nav.links.open{
+      display:flex;
+    }
+    .nav-toggle{
+      display:block;
+    }
+    .nav-phone{
+      display:none;
+    }
+  }
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:76px 0;}
+  .section-head{
+    max-width:56ch;
+    margin-bottom:44px;
+  }
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{
+    font-size:clamp(26px, 3.6vw, 36px);
+    font-weight:700;
+    line-height:1.08;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    margin-top:14px;
+    font-size:16.5px;
+  }
+  /* ---------- WHY ---------- */
+  .why{
+    background:var(--teal-deep);
+    color:var(--cream);
+  }
+  .why .section-head h2{color:var(--cream);}
+  .why .section-head p{color:#cdc7ba;}
+  .why .eyebrow{color:var(--rust-light);}
+  .why .eyebrow::before{background:#e0a37e;}
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:rgba(255,255,255,0.14);
+    border:1px solid rgba(255,255,255,0.14);
+  }
+  @media (max-width:760px){/why-grid{grid-template-columns:1fr;}}
+  .why-item{
+    background:var(--teal-deep);
+    padding:30px 26px;
+  }
+  .why-item .num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:#e0a37e;
+    letter-spacing:0.08em;
+  }
+  .why-item h3{
+    font-size:19px;
+    margin-top:10px;
+    color:var(--cream);
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .why-item p{
+    color:#cdc7ba;
+    font-size:15px;
+    margin-top:10px;
+  }
+  /* ---------- PROCESS (diagram) ---------- */
+  .process{
+    background:var(--panel);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .diagram-wrap{
+    background:var(--base);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    margin-bottom:48px;
+  }
+  .diagram-caption{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin-top:12px;
+    text-align:center;
+  }
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+  @media (max-width:860px){.steps{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.steps{grid-template-columns:1fr;}}
+  .step .num{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--rust);
+  }
+  .step h3{
+    font-size:17px;
+    margin-top:8px;
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .step p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-top:8px;
+  }
+  /* ---------- COMPARISON ---------- */
+  .comparison{
+    background:var(--panel);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .comp-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    margin-top:40px;
+  }
+  @media (max-width:760px){.comp-grid{grid-template-columns:1fr;}}
+  .comp-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px;
+    background:var(--base);
+  }
+  .comp-card.highlight{
+    border-color:var(--rust);
+    background:var(--panel);
+    box-shadow:0 12px 32px -16px rgba(165,80,42,0.2);
+  }
+  .comp-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .comp-card .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    padding:4px 8px;
+    border-radius:2px;
+    font-weight:bold;
+  }
+  .comp-card .tag.best{
+    background:var(--rust);
+    color:#fff;
+  }
+  .comp-card .tag.premium{
+    background:var(--teal);
+    color:#fff;
+  }
+  .comp-card ul{
+    padding-left:20px;
+    margin:20px 0;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+  .comp-card li{
+    margin-bottom:8px;
+  }
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--teal-deep);
+    color:var(--cream);
+  }
+  .contact .section-head h2{color:var(--cream);}
+  .contact .section-head p{color:#cdc7ba;}
+  .contact .eyebrow{color:var(--rust-light);}
+  .contact .eyebrow::before{background:#e0a37e;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:40px;
+  }
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-methods a, .contact-methods .method{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    color:var(--cream);
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.16);
+  }
+  .contact-methods .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--rust-light);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    display:block;
+  }
+  .contact-methods .value{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:17px;
+  }
+  form{
+    background:var(--base);
+    border-radius:var(--radius);
+    padding:28px;
+  }
+  form label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  form .field{margin-bottom:16px;}
+  form input, form select, form textarea{
+    width:100%;
+    font-family:'Source Serif 4', serif;
+    font-size:15.5px;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:#fff;
+    color:var(--ink);
+  }
+  form input:focus, form select:focus, form textarea:focus{
+    outline:2px solid var(--rust);
+    outline-offset:1px;
+  }
+  form textarea{resize:vertical;min-height:90px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
+  form .submit{
+    width:100%;
+    margin-top:6px;
+    border:none;
+    cursor:pointer;
+    font-size:14px;
+  }
+  .form-note{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:10px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:44px 0 40px;
+    background:var(--teal-deep);
+  }
+  .footer-logo{
+    display:block;
+    height:56px;
+    width:auto;
+    margin:0 auto 26px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--cream);
+    border-top:1px solid rgba(255,255,255,0.14);
+    padding-top:22px;
+  }
+  .btn{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:var(--radius);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--rust);color:#fff;}
+  .btn-primary:hover{box-shadow:0 6px 16px rgba(165,80,42,0.3);}
+  .reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
 </head>
 <body>
 
-<!-- HEADER FROM INDEX GOES HERE -->
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4nO2993fiaLbvrZwlcrQBG9uAAeeK3TNz0n3/6ntPnq7sbJwDtgGDyaAc3x9kVblryri6u7qrXK3POmt6rVNgCT3S1n52+G4AcHFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcfnNgDd87fNw+TzchXoAgCAIQhAIwTACgyAIWZZl6rqum6Zpfu1z+7MAgiAIwzCMIDAKAiCoG7pmGKbhrsG3DfK1T8DlfmAYhkmCoDwezo8gCKJpmtbpdpuyrEiWZVlf+/y+d0AAAFEEQWmaYjmO9SIIgg6HfH845Puy4q7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Cuji Crawl Space Care">
+      Cuji Crawl Space Care
+    </a>
+    <button class="nav-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="learn-more.html">How It Works</a>
+      <a href="about.html">About Me</a>
+      <a href="index.html#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+19105082478">(910) 508-2478</a>
+  </div>
+</header>
 
 <main>
-  <section class="wrap" style="padding-top: 40px;">
-    <div class="section-head">
-      <div class="eyebrow">The Technical Details</div>
-      <h1>Why coastal crawlspaces need special care</h1>
-      <p>Between the humidity, the tides, and a high water table, Hampton Roads crawlspaces stay damp longer than most.</p>
-    </div>
-
-    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-bottom:60px;">
-      <div style="background:#fff; padding:20px; border:1px solid #ccc;">
-        <h3>01 / Humidity</h3>
-        <p>Summer air carries moisture into the crawlspace, hitting cooler wood and feeding mold.</p>
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why this matters here</div>
+        <h2>Coastal soil keeps the water table close.</h2>
+        <p>Between the humidity, the tides, and a high water table, Hampton Roads crawlspaces stay damp longer than most. Left alone, that moisture works its way into the floor joists above it.</p>
       </div>
-      <div style="background:#fff; padding:20px; border:1px solid #ccc;">
-        <h3>02 / Water Table</h3>
-        <p>Much of Hampton Roads sits near sea level. Water has nowhere to go but up.</p>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="num">01 / HUMIDITY</div>
+          <h3>Warm, humid air condenses on cool framing</h3>
+          <p>Summer air carries moisture into the crawlspace, where it hits cooler wood and settles — feeding mold, mildew, and musty odors upstairs.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="num">02 / WATER TABLE</div>
+          <h3>Groundwater sits close to the surface</h3>
+          <p>Much of Hampton Roads sits near sea level. After heavy rain or a high tide, that water has nowhere to go but up into an open crawlspace.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="num">03 / STRUCTURE</div>
+          <h3>Moisture is slow, quiet, and cumulative</h3>
+          <p>Wood rot, rusted ductwork, and pest activity build up unseen for years. Most homeowners find out during a home sale — or too late.</p>
+        </div>
       </div>
-      <div style="background:#fff; padding:20px; border:1px solid #ccc;">
-        <h3>03 / Structure</h3>
-        <p>Moisture is slow, quiet, and cumulative causing wood rot and rusted ductwork over years.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS / DIAGRAM -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">How the barrier works</div>
+        <h2>What's actually happening under the floor</h2>
+        <p>A cross-section of a typical Hampton Roads crawlspace after we've been through it.</p>
+      </div>
+      <div class="diagram-wrap reveal">
+        <svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross section diagram of a house crawlspace showing the vapor barrier, sump pump basin, and water table">
+          <!-- house outline -->
+          <path d="M120 90 L450 20 L780 90" stroke="#141414" stroke-width="2.5" fill="none"/>
+          <line x1="150" y1="90" x2="150" y2="150" stroke="#141414" stroke-width="2.5"/>
+          <line x1="750" y1="90" x2="750" y2="150" stroke="#141414" stroke-width="2.5"/>
+          <line x1="150" y1="150" x2="750" y2="150" stroke="#141414" stroke-width="2.5"/>
+          <!-- floor joists -->
+          <line x1="180" y1="150" x2="180" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="260" y1="150" x2="260" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="340" y1="150" x2="340" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="420" y1="150" x2="420" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="500" y1="150" x2="500" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="580" y1="150" x2="580" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="660" y1="150" x2="660" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <line x1="720" y1="150" x2="720" y2="170" stroke="#141414" stroke-width="1.5"/>
+          <!-- piers -->
+          <rect x="230" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
+          <rect x="460" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
+          <rect x="650" y="170" width="16" height="90" fill="none" stroke="#141414" stroke-width="2"/>
+          <!-- ground / crawlspace floor -->
+          <line x1="150" y1="260" x2="750" y2="260" stroke="#8a8f83" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- vapor barrier -->
+          <line x1="160" y1="255" x2="740" y2="255" stroke="#46615f" stroke-width="4"/>
+          <text x="452" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#46615f">VAPOR BARRIER — SEALED TO PIERS</text>
+          <!-- sump basin -->
+          <rect x="600" y="255" width="60" height="45" fill="none" stroke="#a5502a" stroke-width="2"/>
+          <line x1="630" y1="255" x2="630" y2="230" stroke="#a5502a" stroke-width="2"/>
+          <path d="M622 232 L630 224 L638 232" stroke="#a5502a" stroke-width="2" fill="none"/>
+          <text x="630" y="315" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#a5502a">SUMP PIT</text>
+          <!-- water table -->
+          <line x1="150" y1="300" x2="750" y2="300" stroke="#7fa6c9" stroke-width="1.5" stroke-dasharray="2 4"/>
+          <text x="160" y="313" font-family="JetBrains Mono, monospace" font-size="10" fill="#5c7fa0">WATER TABLE</text>
+          <text x="180" y="140" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b756f">LIVING SPACE</text>
+          <text x="180" y="210" font-family="JetBrains Mono, monospace" font-size="10" fill="#6b756f">CRAWLSPACE</text>
+        </svg>
+        <div class="diagram-caption">The barrier blocks ground moisture from rising; the sump pump removes any water that still collects.</div>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">STEP 1</div>
+          <h3>Inspect &amp; measure</h3>
+          <p>We check humidity, standing water, wood condition, and existing drainage before recommending anything.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">STEP 2</div>
+          <h3>Quote the fix</h3>
+          <p>A written estimate covering barrier grade and square footage — no surprise add-ons.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">STEP 3</div>
+          <h3>Install &amp; check</h3>
+          <p>Barrier is fitted, sealed at seams and piers, and stapled to the perimeter. Existing sump pump is tested and outlet is checked.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">STEP 4</div>
+          <h3>Verify</h3>
+          <p>Final walkthrough and a follow-up humidity reading so you have a before-and-after on record.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="section-head">
-      <h2>How our barrier works</h2>
-    </div>
-    <!-- Include the SVG Process Diagram here -->
-    <div style="background:#fff; border:1px solid #ccc; padding:20px; text-align:center;">
-       <p>[ Diagram showing Cross-section of Crawlspace ]</p>
-       <p><em>The barrier blocks ground moisture from rising; the sump pump removes any water that still collects.</em></p>
-    </div>
-
-    <div style="margin-top:60px;">
-      <h2>Ground Cover vs. Full Encapsulation</h2>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:20px;">
-        <div style="border:2px solid #a5502a; padding:20px; background:#fff;">
-          <h3>Ground Cover (Most Popular)</h3>
+  <!-- COMPARISON SECTION -->
+  <section id="comparison" class="comparison">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Know Your Options</div>
+        <h2>Ground Cover vs. Full Encapsulation</h2>
+        <p>We believe in giving you the protection your home actually needs without selling you an overpriced system. Here is how the two approaches stack up.</p>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-card highlight reveal">
+          <h3>Ground Cover Vapor Barrier <span class="tag best">Most Popular</span></h3>
+          <p>The standard, highly effective method for most crawlspaces. We cover 100% of the soil with a heavy-duty, sealed plastic barrier to block up to 90% of ground moisture from evaporating into your floor joists.</p>
           <ul>
-            <li>Traps water vapor in the soil.</li>
-            <li>Maintains ventilation via existing vents.</li>
-            <li>Highly affordable ($500 - $2,500).</li>
-            <li>Ideal for 90% of local homes.</li>
+            <li><strong>Blocks Ground Moisture:</strong> Traps water vapor directly in the soil.</li>
+            <li><strong>Maintains Ventilation:</strong> Works with existing crawlspace foundation vents.</li>
+            <li><strong>Highly Affordable:</strong> Typically costs $500 - $2,500 depending on crawlspace size.</li>
+            <li><strong>Ideal For:</strong> 90% of local homes with normal humidity and ventilation.</li>
           </ul>
         </div>
-        <div style="border:1px solid #ccc; padding:20px; background:#fff;">
-          <h3>Full Encapsulation (Premium)</h3>
+        <div class="comp-card reveal">
+          <h3>Full Encapsulation <span class="tag premium">Premium</span></h3>
+          <p>A complete sealing process. Foundation vents are bricked up and sealed, walls are fully lined, and a dedicated crawlspace dehumidifier is installed to run 24/7. Highly effective, but much more expensive.</p>
           <ul>
-            <li>Completely seals out outdoor air.</li>
-            <li>Relies on a 24/7 dehumidifier.</li>
-            <li>High investment ($5,000 - $15,000+).</li>
-            <li>Ideal for severe standing water or chronic rot.</li>
+            <li><strong>Total Isolation:</strong> Completely seals out the outdoor air.</li>
+            <li><strong>Mechanical Control:</strong> Relies on a dehumidifier to actively pull moisture out.</li>
+            <li><strong>High Investment:</strong> Costs range from $5,000 to $15,000+ with ongoing electrical/maintenance fees.</li>
+            <li><strong>Ideal For:</strong> Homes with severe standing water, chronic rot, or below-grade basements.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CONTACT FORM FOR EASY BOOKING -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Schedule Services</div>
+        <h2>Ready for a drier, cleaner crawlspace?</h2>
+        <p>Fill out the form below to lock in an honest inspection.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-methods reveal">
+          <a href="tel:+19105082478">
+            <div>
+              <span class="label">Call or text</span>
+              <span class="value">(910) 508-2478</span>
+            </div>
+          </a>
+          <a href="mailto:cujicrawlspacecare@gmail.com">
+            <div>
+              <span class="label">Email</span>
+              <span class="value">cujicrawlspacecare@gmail.com</span>
+            </div>
+          </a>
+          <div class="method">
+            <div>
+              <span class="label">Service area</span>
+              <span class="value">Hampton Roads, VA</span>
+            </div>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
+          <input type="hidden" name="\_subject" value="New inquiry from Learn More page">
+          <input type="hidden" name="\_template" value="table">
+          <input type="hidden" name="\_captcha" value="false">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="address">Property address / city</label>
+            <input id="address" name="Property address" type="text" placeholder="e.g. Norfolk, VA" required>
+          </div>
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="Service requested">
+              <option>Crawlspace inspection</option>
+              <option>Sump pump check</option>
+              <option>Crawlspace clean-out</option>
+              <option>Moisture barrier installation</option>
+              <option>Not sure — need an assessment</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know?</label>
+            <textarea id="notes" name="Notes" placeholder="Musty smell, visible water, preferred times, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit">Send request</button>
+          <div class="form-note">We'll follow up within 24 hours to schedule.</div>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAEJCAYAAAD8YNLtAADrMUlEQVR4..." alt="Coastal Crawl Space Care">
+    <div class="footer-row">
+      <span>© <span id="year"></span> Cuji Crawl Space Care — Hampton Roads, VA</span>
+      <span>(910) 508-2478 · cujicrawlspacecare@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
 <script>
-  function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

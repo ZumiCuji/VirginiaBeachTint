@@ -1,51 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Include the same HEAD elements, CSS, and Header from index.html here -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Me | Cuji Crawl Space Care</title>
+<meta name="description" content="Meet the owner of Cuji Crawl Space Care. Learn why an honest, local alternative to $15,000 corporate encapsulation is best for Hampton Roads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --ink-soft:#4b463d;
+    --base:#eef0ea;
+    --base-deep:#e2e5db;
+    --panel:#ffffff;
+    --teal:#46615f;
+    --teal-deep:#141412;
+    --rust:#a5502a;
+    --rust-light:#d98b5f;
+    --cream:#aca89f;
+    --silver:#c9cdc7;
+    --line:#c7ccc3;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--base);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    margin:0;
+  }
+  .mono{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(17,17,15,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--cream);
+  }
+  .brand .mark{
+    height:38px;
+    width:auto;
+    flex-shrink:0;
+  }
+  nav.links{
+    display:flex;
+    gap:28px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  nav.links a{
+    text-decoration:none;
+    color:var(--cream);
+    border-bottom:2px solid transparent;
+    padding-bottom:3px;
+    transition:border-color .2s, color .2s;
+  }
+  nav.links a:hover, nav.links a:focus-visible{color:var(--rust-light);border-color:var(--rust-light);}
+  .nav-phone{
+    font-family:'JetBrains Mono', monospace;
+    font-size:14px;
+    font-weight:500;
+    background:var(--rust);
+    color:#fff;
+    padding:9px 16px;
+    text-decoration:none;
+    border-radius:var(--radius);
+    white-space:nowrap;
+  }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--cream);
+    cursor:pointer;
+    padding:4px;
+  }
+  .nav-toggle svg{
+    width:28px;
+    height:28px;
+    fill:currentColor;
+  }
+  @media (max-width:760px){
+    nav.links{
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:rgba(17,17,15,0.98);
+      border-bottom:1px solid rgba(255,255,255,0.15);
+      padding:24px 28px;
+      gap:20px;
+    }
+    nav.links.open{
+      display:flex;
+    }
+    .nav-toggle{
+      display:block;
+    }
+    .nav-phone{
+      display:none;
+    }
+  }
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:76px 0;}
+  .section-head{
+    max-width:56ch;
+    margin-bottom:44px;
+  }
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{
+    font-size:clamp(26px, 3.6vw, 36px);
+    font-weight:700;
+    line-height:1.08;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    margin-top:14px;
+    font-size:16.5px;
+  }
+  /* ---------- ABOUT GRID ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+  @media (max-width: 860px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .about-story p {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .about-story h3 {
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+  .about-story ul {
+    padding-left: 20px;
+    color: var(--ink-soft);
+  }
+  .about-story li {
+    margin-bottom: 12px;
+  }
+  .about-sidebar {
+    background: var(--base-deep);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 36px;
+    text-align: center;
+    box-shadow: 0 12px 32px -16px rgba(24,37,36,0.15);
+  }
+  .about-sidebar .avatar-placeholder {
+    width: 140px;
+    height: 140px;
+    background: var(--silver);
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+  }
+  .about-sidebar .avatar-placeholder svg {
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+  }
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--teal-deep);
+    color:var(--cream);
+  }
+  .contact .section-head h2{color:var(--cream);}
+  .contact .section-head p{color:#cdc7ba;}
+  .contact .eyebrow{color:var(--rust-light);}
+  .contact .eyebrow::before{background:#e0a37e;}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:40px;
+  }
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-methods a, .contact-methods .method{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    color:var(--cream);
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.16);
+  }
+  .contact-methods .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--rust-light);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    display:block;
+  }
+  .contact-methods .value{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:17px;
+  }
+  form{
+    background:var(--base);
+    border-radius:var(--radius);
+    padding:28px;
+  }
+  form label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  form .field{margin-bottom:16px;}
+  form input, form select, form textarea{
+    width:100%;
+    font-family:'Source Serif 4', serif;
+    font-size:15.5px;
+    padding:11px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:#fff;
+    color:var(--ink);
+  }
+  form input:focus, form select:focus, form textarea:focus{
+    outline:2px solid var(--rust);
+    outline-offset:1px;
+  }
+  form textarea{resize:vertical;min-height:90px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
+  form .submit{
+    width:100%;
+    margin-top:6px;
+    border:none;
+    cursor:pointer;
+    font-size:14px;
+  }
+  .form-note{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    margin-top:10px;
+    font-family:'JetBrains Mono', monospace;
+  }
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:44px 0 40px;
+    background:var(--teal-deep);
+  }
+  .footer-logo{
+    display:block;
+    height:56px;
+    width:auto;
+    margin:0 auto 26px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    color:var(--cream);
+    border-top:1px solid rgba(255,255,255,0.14);
+    padding-top:22px;
+  }
+  .btn{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:var(--radius);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--rust);color:#fff;}
+  .btn-primary:hover{box-shadow:0 6px 16px rgba(165,80,42,0.3);}
+  .reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
 </head>
 <body>
 
-<!-- HEADER FROM INDEX GOES HERE -->
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4nO2993fiaLbvrZwlcrQBG9uAAeeK3TNz0n3/6ntPnq7sbJwDtgGDyaAc3x9kVblryri6u7qrXK3POmt6rVNgCT3S1n52+G4AcHFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcfnNgDd87fNw+TzchXoAgCAIQhAIwTACgyAIWZZl6rqum6Zpfu1z+7MAgiAIwzCMIDAKAiCoG7pmGKbhrsG3DfK1T8DlfmAYhkmCoDwezo8gCKJpmtbpdpuyrEiWZVlf+/y+d0AAAFEEQWmaYjmO9SIIgg6HfH845Puy4q7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Cuji Crawl Space Care">
+      Cuji Crawl Space Care
+    </a>
+    <button class="nav-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="learn-more.html">How It Works</a>
+      <a href="about.html">About Me</a>
+      <a href="index.html#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+19105082478">(910) 508-2478</a>
+  </div>
+</header>
 
 <main>
   <section class="wrap" style="padding-top: 60px;">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="eyebrow">Nice to meet you</div>
-      <h1>Honest Care for Hampton Roads</h1>
+      <h1>Honest, Local alternative for Hampton Roads</h1>
+      <p>I started Cuji Crawl Space Care to deliver a transparent, direct alternative to the high-pressure $15,000 corporate franchise models.</p>
     </div>
 
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-      <div>
-        <p>Hi, I'm the founder of <strong>Cuji Crawl Space Care</strong>.</p>
-        <p>I started this business because I was tired of seeing homeowners in Hampton Roads getting pressured into massive, $15,000 encapsulation systems by large corporate franchises when a simple, well-installed moisture barrier and sump pump would solve the problem.</p>
+    <div class="about-grid">
+      <div class="about-story reveal">
+        <p>Living and working in coastal Virginia, I've seen firsthand how our unique regional geography—characterized by sandy, moisture-retaining soils, a remarkably high water table, and heavy seasonal humidity—can silently damage crawlspaces. But I’ve also seen firsthand how the big structural franchises take advantage of this reality.</p>
         
-        <p>I live and work locally. I know how the high water tables and coastal humidity affect our homes. My approach is straightforward: I come out, I inspect the space, I show you exactly what's happening under your floors with photos, and I give you a fair, no-nonsense quote.</p>
-        
-        <h3>Why work with me?</h3>
+        <p>I built this company with a simple, contrasting principle: <strong>Do only what is necessary, do it cleanly, and charge fairly.</strong> For 90% of local homes with damp crawlspaces, you do not need expensive structural encapsulation, air-locking machinery, or active permanent dehumidifiers. A heavy-duty, professionally sealed 6 mil vapor barrier paired with a cleanly maintained sump pump is all it takes to keep your joists secure.</p>
+
+        <h3>Why work with an independent owner?</h3>
         <ul>
-          <li><strong>No high-pressure sales:</strong> I give you the facts and let you decide.</li>
-          <li><strong>Direct communication:</strong> When you call or email, you talk to me.</li>
-          <li><strong>Quality work:</strong> I use 6-mil minimum barriers (thicker available) and seal them right.</li>
-          <li><strong>Fully Insured:</strong> Peace of mind for your home.</li>
+          <li><strong>Zero Sales Pressure:</strong> I am here to diagnose and resolve your crawlspace moisture, not hit a quarterly franchise sales target.</li>
+          <li><strong>Direct Accountability:</strong> When you call or email, you talk directly to me. I’m also the specialist who inspects and works under your home.</li>
+          <li><strong>Premium Local Materials:</strong> We use industry-standard 6 mil soil barriers, tightly stapled and sealed along structural piers. We also offer thicker upgrades if desired.</li>
+          <li><strong>Fully Insured &amp; Local:</strong> We reside right here in Hampton Roads. We are licensed and insured.</li>
         </ul>
-        
-        <br>
-        <a href="index.html#contact" class="btn btn-primary">Let's get in touch</a>
       </div>
-      
-      <div style="background:#e2e5db; padding: 40px; text-align: center; border-radius: 4px;">
-        <!-- Placeholder for a personal photo -->
-        <div style="width: 200px; height: 200px; background:#c7ccc3; border-radius:50%; margin: 0 auto 20px;"></div>
-        <h3>Locally Owned & Operated</h3>
-        <p>Proudly serving Norfolk, Virginia Beach, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and Williamsburg.</p>
+
+      <div class="about-sidebar reveal">
+        <div class="avatar-placeholder">
+          <!-- Stylized avatar SVG for a clean independent look -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 style="margin-bottom:8px;">Locally Owned &amp; Run</h3>
+        <p style="color:var(--ink-soft); font-size:15px; margin-bottom:20px;">Dedicated to maintaining the foundations and flooring structures of our Hampton Roads neighbors.</p>
+        <a href="#contact" class="btn btn-primary" style="width:100%; justify-content:center;">Book a consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM FOR ACCESSIBLE BOOKING -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Ready to connect with me?</h2>
+        <p>Whichever scheduling method is easiest—text, call, or email. I look forward to working with you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-methods reveal">
+          <a href="tel:+19105082478">
+            <div>
+              <span class="label">Call or text</span>
+              <span class="value">(910) 508-2478</span>
+            </div>
+          </a>
+          <a href="mailto:cujicrawlspacecare@gmail.com">
+            <div>
+              <span class="label">Email</span>
+              <span class="value">cujicrawlspacecare@gmail.com</span>
+            </div>
+          </a>
+          <div class="method">
+            <div>
+              <span class="label">Service area</span>
+              <span class="value">Hampton Roads, VA</span>
+            </div>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
+          <input type="hidden" name="\_subject" value="New inquiry from About page">
+          <input type="hidden" name="\_template" value="table">
+          <input type="hidden" name="\_captcha" value="false">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="address">Property address / city</label>
+            <input id="address" name="Property address" type="text" placeholder="e.g. Virginia Beach, VA" required>
+          </div>
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="Service requested">
+              <option>Crawlspace inspection</option>
+              <option>Sump pump check</option>
+              <option>Crawlspace clean-out</option>
+              <option>Moisture barrier installation</option>
+              <option>Not sure — need an assessment</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know?</label>
+            <textarea id="notes" name="Notes" placeholder="Tell me more about your crawlspace concerns..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit">Send request</button>
+          <div class="form-note">Goes straight to my phone. I'll get back to you promptly.</div>
+        </form>
       </div>
     </div>
   </section>
 </main>
 
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAEJCAYAAAD8YNLtAADrMUlEQVR4..." alt="Coastal Crawl Space Care">
+    <div class="footer-row">
+      <span>© <span id="year"></span> Cuji Crawl Space Care — Hampton Roads, VA</span>
+      <span>(910) 508-2478 · cujicrawlspacecare@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
 <script>
-  function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
