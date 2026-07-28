@@ -3,73 +3,532 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cuji Crawl Space Care | Hampton Roads</title>
-<meta name="description" content="Crawlspace inspections, sump pump testing, and moisture barrier installation across Hampton Roads, Virginia.">
+<title>Cuji Crawl Space Care | Hampton Roads Crawlspace &amp; Sump Pump Inspections</title>
+<meta name="description" content="Crawlspace inspections, sump pump testing, and moisture barrier installation across Hampton Roads, Virginia. Call, text, email, or request an appointment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink:#141414; --ink-soft:#4b463d; --base:#eef0ea; --base-deep:#e2e5db; 
-    --panel:#ffffff; --teal:#46615f; --teal-deep:#141412; --rust:#a5502a; 
-    --rust-light:#d98b5f; --cream:#aca89f; --silver:#c9cdc7; --line:#c7ccc3; --radius:2px;
+    --ink: #111311;
+    --ink-soft: #4a504a;
+    --base: #f4f6f1;
+    --base-deep: #e6ebdf;
+    --panel: #ffffff;
+    --teal: #3b5654;
+    --teal-deep: #162423;
+    --rust: #a5502a;
+    --rust-light: #d98b5f;
+    --cream: #d3cfc7;
+    --silver: #dbe0db;
+    --line: #d2d7cf;
+    --radius: 4px;
+    --shadow-sm: 0 2px 8px rgba(22, 36, 35, 0.04);
+    --shadow-md: 0 12px 30px -10px rgba(22, 36, 35, 0.08);
+    --shadow-lg: 0 24px 50px -12px rgba(22, 36, 35, 0.12);
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--base); color:var(--ink); font-family:'Source Serif 4', serif; line-height:1.55; }
-  h1,h2,h3 { font-family:'Archivo Expanded', sans-serif; text-transform:uppercase; margin:0; }
-  a { color:inherit; text-decoration:none; }
-  img,svg { max-width:100%; display:block; }
-  .wrap { max-width:1120px; margin:0 auto; padding:0 28px; }
   
-  /* HEADER & MOBILE NAV */
-  header { position:sticky; top:0; z-index:50; background:rgba(17,17,15,0.94); border-bottom:1px solid rgba(255,255,255,0.1); }
-  .nav { display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1120px; margin:0 auto; }
-  .brand { display:flex; align-items:center; gap:10px; font-family:'Archivo Expanded', sans-serif; font-weight:800; font-size:15px; color:var(--cream); }
-  .brand img { height: 38px; }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   
-  .nav-links { display:flex; gap:28px; font-family:'Archivo Expanded', sans-serif; font-size:13px; text-transform:uppercase; }
-  .nav-links a { color:var(--cream); border-bottom:2px solid transparent; padding-bottom:3px; }
-  .nav-links a:hover { color:var(--rust-light); border-color:var(--rust-light); }
+  body{
+    margin:0;
+    background:var(--base);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
   
-  .nav-phone { font-family:'JetBrains Mono', monospace; font-size:14px; background:var(--rust); color:#fff; padding:9px 16px; border-radius:var(--radius); }
-  .hamburger { display:none; background:none; border:none; color:var(--cream); font-size:24px; cursor:pointer; }
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    color:var(--ink);
+    margin:0;
+  }
   
+  .mono{
+    font-family:'JetBrains Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  
+  a{color:inherit; text-decoration:none; transition: var(--transition);}
+  img,svg{max-width:100%;display:block;}
+  
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+  
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(22, 36, 35, 0.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    transition: var(--transition);
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--base);
+  }
+  .brand .mark{
+    height:36px;
+    width:auto;
+    flex-shrink:0;
+  }
+  nav.links{
+    display:flex;
+    gap:32px;
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  nav.links a{
+    color:var(--cream);
+    border-bottom:2px solid transparent;
+    padding-bottom:3px;
+  }
+  nav.links a:hover, nav.links a:focus-visible{
+    color:var(--rust-light);
+    border-color:var(--rust-light);
+  }
+  nav.links a.active{
+    color:var(--base);
+    border-color:var(--rust);
+  }
+  .nav-phone{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    font-weight:500;
+    background:var(--rust);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:var(--radius);
+    white-space:nowrap;
+    box-shadow: var(--shadow-sm);
+  }
+  .nav-phone:hover{
+    background:var(--rust-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--cream);
+    cursor:pointer;
+    padding:4px;
+  }
+  .nav-toggle svg{
+    width:24px;
+    height:24px;
+    fill:currentColor;
+  }
+  @media (max-width:760px){
+    nav.links{
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--teal-deep);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      padding:24px 28px;
+      gap:20px;
+    }
+    nav.links.open{
+      display:flex;
+    }
+    .nav-toggle{
+      display:block;
+    }
+    .nav-phone{
+      display:none;
+    }
+  }
+  
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:96px 0 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+  }
   @media (max-width:860px){
-    .nav-links { display:none; flex-direction:column; position:absolute; top:100%; left:0; width:100%; background:#111; padding:20px; gap:15px; }
-    .nav-links.active { display:flex; }
-    .hamburger { display:block; }
-    .nav-phone { display:none; } /* Move to menu on mobile */
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .hero{padding:64px 0 40px;}
   }
-
-  /* BUTTONS & HERO */
-  .hero { padding:64px 0 40px; }
-  .hero-grid { display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center; }
-  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
-  .eyebrow { font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--teal-deep); text-transform:uppercase; margin-bottom:18px; }
-  .hero h1 { font-size:clamp(34px, 5.4vw, 56px); line-height:1.02; }
-  .hero h1 em { font-style:normal; color:var(--teal-deep); }
-  .btn { font-family:'Archivo Expanded', sans-serif; font-size:14px; text-transform:uppercase; padding:14px 24px; border-radius:var(--radius); display:inline-flex; border:1px solid transparent; }
-  .btn-primary { background:var(--rust); color:#fff; }
-  .btn-ghost { border-color:var(--ink); }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--teal);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:"";
+    width:24px;height:1px;
+    background:var(--rust);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(36px, 5.5vw, 56px);
+    line-height:1.05;
+    font-weight:800;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--teal);
+  }
+  .hero p.lede{
+    font-family:'Source Serif 4', serif;
+    font-size:20px;
+    color:var(--ink-soft);
+    max-width:48ch;
+    margin-top:24px;
+  }
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:36px;
+  }
+  .btn{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    padding:16px 28px;
+    border-radius:var(--radius);
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn:hover{
+    transform:translateY(-2px);
+  }
+  .btn-primary{background:var(--rust);color:#fff; box-shadow: var(--shadow-sm);}
+  .btn-primary:hover{
+    background:var(--rust-light);
+    box-shadow: var(--shadow-md);
+  }
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink);}
+  .btn-ghost:hover{
+    border-color:var(--teal);
+    color:var(--teal);
+    background:rgba(59, 86, 84, 0.04);
+  }
   
-  /* REUSED SECTIONS */
-  section { padding:76px 0; }
-  .section-head { max-width:56ch; margin-bottom:44px; }
-  .section-head h2 { font-size:clamp(26px, 3.6vw, 36px); }
+  /* ---------- GAUGE CARD ---------- */
+  .gauge-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px;
+    box-shadow: var(--shadow-md);
+  }
+  .gauge-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    margin-bottom:20px;
+    border-bottom:1px solid var(--base-deep);
+    padding-bottom:12px;
+  }
+  .check-row{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--base-deep);
+    font-family:'Source Serif 4', serif;
+    font-size:16px;
+    color:var(--ink-soft);
+  }
+  .check-row:last-of-type{border-bottom:none;}
+  .check-mark{
+    color:var(--rust);
+    font-family:'JetBrains Mono', monospace;
+    flex-shrink:0;
+    font-weight:bold;
+  }
+  .gauge-note{
+    border-top:1px dashed var(--line);
+    margin-top:16px;
+    padding-top:16px;
+    font-family:'Source Serif 4', serif;
+    font-size:14px;
+    color:var(--ink-soft);
+    font-style:italic;
+  }
   
-  .services-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:96px 0;}
+  @media (max-width:760px){section{padding:64px 0;}}
+  .section-head{
+    max-width:58ch;
+    margin-bottom:56px;
+  }
+  .section-head .eyebrow{margin-bottom:16px;}
+  .section-head h2{
+    font-size:clamp(28px, 4vw, 40px);
+    font-weight:700;
+    line-height:1.1;
+  }
+  .section-head p{
+    color:var(--ink-soft);
+    margin-top:18px;
+    font-size:18px;
+  }
+  
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
   @media (max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:640px){.services-grid{grid-template-columns:1fr;}}
-  .service-card { background:var(--panel); padding:30px 26px; border:1px solid var(--line); border-radius:var(--radius); }
+  .service-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:36px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .service-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal);
+  }
+  .service-card .icon{width:36px;height:36px;color:var(--teal);}
+  .service-card h3{font-size:20px; line-height:1.2; text-transform:none; letter-spacing:0;}
+  .service-card p{color:var(--ink-soft);font-size:15px; margin:0;}
+  .service-card .spec{
+    margin-top:auto;
+    padding-top:16px;
+    border-top:1px solid var(--base-deep);
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--rust);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+  .price{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+  }
+  .price-amt{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:36px;
+    font-weight:800;
+    color:var(--ink);
+  }
+  .price-unit{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+  }
+  .price-disclaimer{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    text-align:center;
+    margin-top:32px;
+    font-style:italic;
+  }
   
-  /* CONTACT */
-  .contact { background:var(--teal-deep); color:var(--cream); }
-  .contact h2 { color:var(--cream); }
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
-  @media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
-  form { background:var(--base); padding:28px; border-radius:var(--radius); color:var(--ink); }
-  form label { display:block; font-family:'JetBrains Mono', monospace; font-size:12px; margin-bottom:6px; }
-  form input, form select, form textarea { width:100%; padding:11px 12px; margin-bottom:16px; border:1px solid var(--line); border-radius:var(--radius); }
-  form button { width:100%; border:none; cursor:pointer; }
+  /* ---------- SERVICE AREA ---------- */
+  .area{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  @media (max-width:860px){.area{grid-template-columns:1fr; gap:40px;}}
+  .area-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 32px;
+    margin-top:8px;
+  }
+  .area-list div{
+    font-family:'JetBrains Mono', monospace;
+    font-size:15px;
+    padding:12px 0;
+    border-bottom:1px solid var(--base-deep);
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .area-list div::before{content:"— "; color:var(--rust);}
+  
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--teal-deep);
+    color:var(--cream);
+  }
+  .contact .section-head h2{color:var(--base);}
+  .contact .section-head p{color:var(--cream);}
+  .contact .eyebrow{color:var(--rust-light);}
+  .contact .eyebrow::before{background:var(--rust-light);}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:48px;
+  }
+  @media (max-width:860px){.contact-grid{grid-template-columns:1fr; gap:40px;}}
+  .contact-methods a, .contact-methods .method{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    color:var(--cream);
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .contact-methods a:hover{
+    color:var(--base);
+    border-bottom-color:var(--rust-light);
+  }
+  .contact-methods .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--rust-light);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    display:block;
+    margin-bottom:4px;
+  }
+  .contact-methods .value{
+    font-family:'Archivo Expanded', sans-serif;
+    font-size:18px;
+    letter-spacing:0.02em;
+  }
+  form{
+    background:var(--base);
+    border-radius:var(--radius);
+    padding:36px;
+    box-shadow: var(--shadow-lg);
+  }
+  form label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+    font-weight:500;
+  }
+  form .field{margin-bottom:20px;}
+  form input, form select, form textarea{
+    width:100%;
+    font-family:'Source Serif 4', serif;
+    font-size:16px;
+    padding:12px 16px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:#fff;
+    color:var(--ink);
+    transition: var(--transition);
+  }
+  form input:focus, form select:focus, form textarea:focus{
+    outline:none;
+    border-color:var(--rust);
+    box-shadow: 0 0 0 3px rgba(165,80,42,0.1);
+  }
+  form textarea{resize:vertical;min-height:100px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
+  form .submit{
+    width:100%;
+    margin-top:8px;
+    border:none;
+    font-size:14px;
+  }
+  .form-note{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    font-family:'JetBrains Mono', monospace;
+    line-height:1.5;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:64px 0;
+    background:var(--teal-deep);
+  }
+  .footer-logo{
+    display:block;
+    height:56px;
+    width:auto;
+    margin:0 auto 32px;
+  }
+  .footer-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--cream);
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:24px;
+  }
 </style>
 </head>
 <body>
@@ -77,101 +536,258 @@
 <header>
   <div class="nav">
     <a href="index.html" class="brand">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4..." alt="Logo">
-      Cuji Crawl Space
+      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAC0CAYAAAAAejB9AAB4iUlEQVR4nO2993fiaLbvrZwlcrQBG9uAAeeK3TNz0n3/6ntPnq7sbJwDtgGDyaAc3x9kVblryri6u7qrXK3POmt6rVNgCT3S1n52+G4AcHFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcfnNgDd87fNw+TzchXoAgCAIQhAIwTACgyAIWZZl6rqum6Zpfu1z+7MAgiAIwzCMIDAKAiCoG7pmGKbhrsG3DfK1T8DlfmAYhkmCoDwezo8gCKJpmtbpdpuyrEiWZVlf+/y+d0AAAFEEQWmaYjmO9SIIgg6HfH845Puy4q7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Coastal Crawl Space Care">
+      Cuji Crawl Space Care
     </a>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <nav class="nav-links" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="learn-more.html">Learn More</a>
+    <button class="nav-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="learn-more.html">How It Works</a>
       <a href="about.html">About Me</a>
+      <a href="#area">Service Area</a>
       <a href="#contact">Contact</a>
-      <a href="tel:+19105082478" class="nav-phone mobile-only">(910) 508-2478</a>
     </nav>
     <a class="nav-phone" href="tel:+19105082478">(910) 508-2478</a>
   </div>
 </header>
 
-<main>
+<main id="top">
+  <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <div class="eyebrow">Hampton Roads, Virginia</div>
         <h1>Tired of<br><em>$15,000 quotes</em><br>from corporate franchises?</h1>
-        <p class="lede">Most Hampton Roads crawlspaces don't need a massive encapsulation package. They just need a high-quality vapor barrier and a functioning sump pump.</p>
-        <div style="display:flex; gap:14px; margin-top:30px;">
-          <a class="btn btn-primary" href="#contact">Book Inspection</a>
-          <a class="btn btn-ghost" href="learn-more.html">How it works</a>
+        <p class="lede">Most Hampton Roads crawlspaces don't need a massive, $15,000 corporate encapsulation package. They just need a high-quality, properly installed vapor barrier and a functioning sump pump. At Cuji Crawl Space Care, we offer honest, licensed, and insured local service without the high-pressure sales tactics.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Request an inspection</a>
+          <a class="btn btn-ghost" href="learn-more.html">How It Works</a>
         </div>
       </div>
-      <!-- Hero Gauge card can go here as before -->
-    </div>
-  </section>
-
-  <section id="services" class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Core Services</div>
-      <h2>Simple Solutions for Dry Crawlspaces</h2>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Inspection</h3>
-        <p>A professional walkthrough covering moisture, rot, mold, and existing barriers.</p>
-        <strong style="font-size:24px;">$30</strong>
-      </div>
-      <div class="service-card">
-        <h3>Sump Pump Check</h3>
-        <p>Test float switch, check electrical power, and clear debris.</p>
-        <strong style="font-size:24px;">$70</strong>
-      </div>
-      <div class="service-card">
-        <h3>Clean-Out</h3>
-        <p>Removing damaged barriers, debris, and trash.</p>
-        <strong style="font-size:24px;">Custom Quote</strong>
-      </div>
-      <div class="service-card">
-        <h3>Vapor Barrier</h3>
-        <p>Heavy-duty 6 mil barrier sealed to piers and walls.</p>
-        <strong style="font-size:24px;">$1.00 / sq ft</strong>
+      <div class="gauge-card reveal">
+        <div class="gauge-head"><span>What we check</span><span>Every inspection</span></div>
+        <div class="check-row"><span class="check-mark">—</span>Musty odor or visible mold on framing</div>
+        <div class="check-row"><span class="check-mark">—</span>Standing water or damp, dark soil</div>
+        <div class="check-row"><span class="check-mark">—</span>Sagging, soft, or discolored floor joists</div>
+        <div class="check-row"><span class="check-mark">—</span>Torn, missing, or unsealed vapor barrier</div>
+        <div class="check-row"><span class="check-mark">—</span>Sump pump operation &amp; GFCI outlet</div>
+        <div class="gauge-note">Diagnostic fee is just $30 (fully credited toward your barrier installation). Fully Insured.</div>
       </div>
     </div>
   </section>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">What we do</div>
+        <h2>Four services, one goal: a dry crawlspace</h2>
+        <p>Choose individual services or combine them for complete moisture and debris control.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="17" cy="17" r="11" stroke="currentColor" stroke-width="2"/>
+            <line x1="25" y1="25" x2="34" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="17" y1="11" x2="17" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="17" y1="17" x2="21" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3>Crawlspace Inspection</h3>
+          <p>A thorough, professional walkthrough covering moisture levels, structural wood condition, mold, pests, standing water, and existing vapor barrier health — with full photo evidence.</p>
+          <div class="spec">Report delivered same day</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="12" y="6" width="16" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 30 L16 34 M24 30 L24 34" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 34 L24 34" stroke="currentColor" stroke-width="2"/>
+            <path d="M20 12 L20 22 M17 19 L20 22 L23 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Sump Pump Check</h3>
+          <p>We manually test the float switch, check electrical power delivery at the GFCI outlet, and clear out mud or debris clogging the basin or discharge lines.</p>
+          <div class="spec">Test, GFCI check &amp; debris removal</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 12 L32 12 M12 12 L14 32 C14 33 15 34 16 34 L24 34 C25 34 26 33 26 32 L28 12 M16 12 L16 8 C16 7 17 6 18 6 L22 6 C23 6 24 7 24 8 L24 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="16" y1="18" x2="16" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="20" y1="18" x2="20" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24" y1="18" x2="24" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3>Crawlspace Clean-Out</h3>
+          <p>Ripping out and hauling away old water-damaged vapor barriers, fallen insulation, organic matter, or construction debris to prepare the space for clean air.</p>
+          <div class="spec">Free on-site estimate</div>
+        </div>
+        <div class="service-card reveal">
+          <svg class="icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 30 L6 14 L20 6 L34 14 L34 30" stroke="currentColor" stroke-width="2" fill="none"/>
+            <line x1="6" y1="30" x2="34" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="28" x2="30" y2="28" stroke="currentColor" stroke-width="2" stroke-dasharray="2 3"/>
+          </svg>
+          <h3>Moisture Barrier Installation</h3>
+          <p>Heavy-duty 6 mil vapor barrier sealed to piers, walls, and seams — cutting off ground moisture at the source and giving the crawlspace a cleaner, drier finish.</p>
+          <div class="spec">6 mil, seams sealed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Pricing</div>
+        <h2>Straightforward, competitive rates</h2>
+        <p>Every quote is confirmed after a walkthrough of the actual crawlspace — square footage, access, and existing conditions all affect the final number.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <h3>Crawlspace Inspection</h3>
+          <div class="price"><span class="price-amt">$30</span><span class="price-unit">flat rate</span></div>
+          <p>Complete walkthrough with a detailed written report. Fully credited to your moisture barrier if you go with us.</p>
+          <div class="spec">diagnostic fee</div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Sump Pump Check</h3>
+          <div class="price"><span class="price-amt">$70</span><span class="price-unit">flat rate</span></div>
+          <p>Test operation, verify the float switch works, confirm the GFCI outlet is safe, and clear any clogging debris.</p>
+          <div class="spec">Add-on with any inspection</div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Crawlspace Clean-Out</h3>
+          <div class="price"><span class="price-amt">Custom</span><span class="price-unit">per job</span></div>
+          <p>Ripping out old, ruined vapor barriers, fallen insulation, wood debris, and organic trash to prep the crawlspace.</p>
+          <div class="spec">individually quoted</div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Vapor Barrier Installation</h3>
+          <div class="price"><span class="price-amt">$1.00</span><span class="price-unit">/ sq ft</span></div>
+          <p>6 mil barrier, sealed at seams and piers, stapled to the perimeter.</p>
+          <div class="spec">$300 minimum</div>
+        </div>
+      </div>
+      <p class="price-disclaimer"> Combined services will offer a discount, reach out for a quote!</p>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area">
+    <div class="wrap area">
+      <div class="reveal">
+        <div class="eyebrow">Where we work</div>
+        <h2>Serving the Hampton Roads region</h2>
+        <p style="color:var(--ink-soft); margin-top:14px;">Based locally and familiar with the crawlspace conditions specific to this stretch of coastal Virginia. Don't see your town listed? Reach out — we cover the surrounding area too.</p>
+      </div>
+      <div class="area-list reveal">
+        <div>Norfolk</div>
+        <div>Virginia Beach</div>
+        <div>Chesapeake</div>
+        <div>Portsmouth</div>
+        <div>Suffolk</div>
+        <div>Hampton</div>
+        <div>Newport News</div>
+        <div>Williamsburg</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Schedule a Service</h2>
-        <p>Call, text, or fill out the form below. I handle all inquiries directly.</p>
+      <div class="section-head reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Call, text, email, or request an appointment</h2>
+        <p>Whichever is easiest — every message reaches the same inbox.</p>
       </div>
       <div class="contact-grid">
-        <div>
-          <h3>Contact Info</h3>
-          <p>Phone: <a href="tel:+19105082478">(910) 508-2478</a></p>
-          <p>Email: cujicrawlspacecare@gmail.com</p>
-          <p>Service Area: Hampton Roads, VA</p>
+        <div class="contact-methods reveal">
+          <a href="tel:+19105082478">
+            <div>
+              <span class="label">Call or text</span>
+              <span class="value">(910) 508-2478</span>
+            </div>
+          </a>
+          <a href="mailto:cujicrawlspacecare@gmail.com">
+            <div>
+              <span class="label">Email</span>
+              <span class="value">cujicrawlspacecare@gmail.com</span>
+            </div>
+          </a>
+          <div class="method">
+            <div>
+              <span class="label">Service area</span>
+              <span class="value">Hampton Roads, VA</span>
+            </div>
+          </div>
         </div>
-        <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST">
-          <label>Name</label><input type="text" name="Name" required>
-          <label>Phone</label><input type="tel" name="Phone" required>
-          <label>Email</label><input type="email" name="Email" required>
-          <label>Service Needed</label>
-          <select name="Service">
-            <option>Inspection</option>
-            <option>Vapor Barrier</option>
-            <option>Clean-out</option>
-            <option>Not Sure</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Send Request</button>
+        <form action="https://formsubmit.co/cujicrawlspacecare@gmail.com" method="POST" class="reveal">
+          <input type="hidden" name="_subject" value="New inquiry — Cuji Crawl Space Care website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="address">Property address / city</label>
+            <input id="address" name="Property address" type="text" placeholder="e.g. Chesapeake, VA" required>
+          </div>
+          <div class="field">
+            <label for="service">What do you need?</label>
+            <select id="service" name="Service requested">
+              <option>Crawlspace inspection</option>
+              <option>Sump pump check</option>
+              <option>Crawlspace clean-out</option>
+              <option>Moisture barrier installation</option>
+              <option>Not sure — need an assessment</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="notes">Anything we should know?</label>
+            <textarea id="notes" name="Notes" placeholder="Musty smell, visible water, upcoming home sale, preferred days/times, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit">Send request</button>
+          <div class="form-note">Goes straight to cujicrawlspacecare@gmail.com — we'll follow up by phone or email to schedule.</div>
         </form>
       </div>
     </div>
   </section>
 </main>
 
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAEJCAYAAAD8YNLtAADrMUlEQVR4nOy951cbWdb2XTlXKWckgQAhQGTH7pm50/P+1c9z52lncs4CJCEhlCvH90NRNu0xwt3tbhv3+a1ZM2uNVeiojnR2nX2ufW0IAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgPwDV97HADAIMAXFPDNAsMwjCAwgqIYCsMw4jiObZqmadu2/bXH9mcBhmEYRVEUw1AhmEYRVEUw1EcxxkMxTAUxTEUxVAcgRAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhsehYkhmYy4o7Bt4zrwX3DQCAIYRiG+/2+4Ph4bHJ6amoWxzGi3x90S7v7a1f1RoXnhYF1w9c+3+8REARBgiBIv88bSqUSU5MTyQxFkszVVePy6OS0VLuqXwiCyLue3LeJ68F9o8AwBKMIigUC/vBUeiI3P5d/PFcsrBAETjVbrfrNlgm5rFRPZVmWdN3QXSP3ZYFhGEZRFAsG/JHJyVRmeXHueS47M88wNFe5rJVxAidAEIQq1dqZLCuSYRiGuwbfFq6B+waBIAgicIL0ej2BQj63tLQ092xlaeFHn9cThGEYDgb8ERRFUZZlPAAAAFdX9cshL/R1Xde/9rl/L0AQBOE4Tvh9vlAhn11aWpx7vrK8+IPHw/lhCIa9Hk8AJwmC41jvy1dvgXrjujIc8n3DMIyvfe4uH3AN3DeEnUyAIIamuVgskpiempxdXlp4npmZKoaCgSiKohgIgiCCIOjkRCoDAACAoii2tV16e35xedzpdJt28sFyt0u/EmcNOJbxRiLhseh" alt="Coastal Crawl Space Care">
+    <div class="footer-row">
+      <span>© <span id="year"></span> Cuji Crawl Space Care — Hampton Roads, VA</span>
+      <span>(910) 508-2478 · cujicrawlspacecare@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
 <script>
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
-  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.12});
+  revealEls.forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
