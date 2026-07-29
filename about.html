@@ -368,9 +368,9 @@
   form textarea{resize:vertical;min-height:100px;}
   .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
   @media (max-width:520px){.form-row{grid-template-columns:1fr;}}
-  
+
   /* ---------- ENHANCED SUBMIT BUTTON ---------- */
-  form .submit{
+   form .submit{
     width:100%;
     margin-top:12px;
     border:none;
@@ -380,8 +380,15 @@
     display:flex;
     justify-content:center;
     align-items:center;
+    background: var(--rust);
+    color: #fff;
   }
-  
+  form .submit:hover{
+    background: var(--rust-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
   .form-note{
     font-size:12px;
     color:var(--ink-soft);
